@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN Login System</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+        .true-message {
+          color: green;
+          margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Enter PIN</h2>
+        <input type="number" id="pinInput" placeholder="Enter your PIN">
+        <button onclick="validatePin()">Submit</button>
+        <p id="errorMessage" class="error-message"></p>
+        
+         <p id="trueMessage" class="true-message"></p>
+        
+    </div>
+
+    <script>
+        // Predefined correct PIN
+        const correctPin = "0000";
+
+        function validatePin() {
+            // Get the entered PIN
+            const enteredPin = document.getElementById("pinInput").value;
+
+            // Check if the entered PIN is correct
+            if (enteredPin === correctPin) {
+                // Redirect to another page if the PIN is correct
+                
+                document.getElementById("trueMessage").textContent = "Correct PIN..";
+                
+                
+                window.location.href = "https://earningpoint101.blogspot.com/"; // Replace with your desired page
+            } else {
+                // Display an error message if the PIN is incorrect
+                document.getElementById("errorMessage").textContent = "Incorrect PIN. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>

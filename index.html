@@ -805,23 +805,5 @@ window.addEventListener('load', function() {
 </script>
 </body>
 </html>
-<script>
-tch(error => {
-                    alert('Error placing bet: ' + error.message);
-                });
-            });
-            
-            // Logout
-            logoutBtn.addEventListener('click', () => {
-                auth.signOut().then(() => {
-                    alert('You have been logged out!');
-                    // In a real app, redirect to login page
-                });
-            });
-        }
-
-        // Initialize the app when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initApp);
-    </script>
 </body>
 </html>
